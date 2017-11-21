@@ -39,7 +39,7 @@ var app = angular.module('starter.controllers', ['ionic','ngFitText'])
 
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://localhost/gcmobile1/php/login.php',
+        url: 'http://192.168.1.2/gcmobile1/php/login.php',
         method: "POST",
         data: {
             'username' : username,
@@ -87,7 +87,7 @@ Alert("Incorect");
   function getInfo(){
 
 
-  $http.post('php/medicineDetails.php').success(function(data){
+  $http.post('http://192.168.1.2/gcmobile1/php/medicineDetails.php').success(function(data){
   // Stored the returned data into scoper
   $scope.details = data;
   });
@@ -99,7 +99,7 @@ Alert("Incorect");
 
   getInfo();
   function getInfo(){
-  $http.post('php/announcementDetails.php').success(function(data){
+  $http.post('http://192.168.1.2/gcmobile1/php/announcementDetails.php').success(function(data){
   // Stored the returned data into scoper
   $scope.details = data;
   });
@@ -119,7 +119,7 @@ Alert("Incorect");
 
 	getInfos();
 	function getInfos(){
-		$http.post('php/account_pull.php',{"accn":getInfos.acc = localStorage.getItem("name")}).success(function(data){
+		$http.post('http://192.168.1.2/gcmobile1/php/account_pull.php',{"accn":getInfos.acc = localStorage.getItem("name")}).success(function(data){
 			$scope.accountInfo = data;
 
 		});
@@ -175,7 +175,7 @@ var myVar = setInterval(function() { myTimer()}, 200);
 
 	getInfos();
 	function getInfos(){
-		$http.post('php/account_pull.php',{"accn":getInfos.acc = localStorage.getItem("name")}).success(function(data){
+		$http.post('http://192.168.1.2/gcmobile1/php/account_pull.php',{"accn":getInfos.acc = localStorage.getItem("name")}).success(function(data){
 			$scope.accountInfo = data;
 
 		});
@@ -188,7 +188,7 @@ var myVar = setInterval(function() { myTimer()}, 200);
 	$scope.currentUser = info;
 	}
 	$scope.UpdateInfo = function(info){
-	$http.post('http://localhost/gcmobile1/php/updateDetails.php',{"id":info.id,"uname":info.username,"address":info.address,"contact":info.contact}).success(function(data){
+	$http.post('http://192.168.1.2/gcmobile1/php/updateDetails.php',{"id":info.id,"uname":info.username,"address":info.address,"contact":info.contact}).success(function(data){
 	if (data == true) {
 	getInfos();
 	}
