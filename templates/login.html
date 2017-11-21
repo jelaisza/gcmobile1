@@ -1,0 +1,90 @@
+<style>
+.scroll-bg{
+ background: url("img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    }
+
+    .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+
+
+
+    .float-button {
+
+
+      width: 90%;
+      padding: 30px;
+      font-size: 40px;
+      background:;
+      position: fixed;
+      bottom: 20px; /* Adjust to where you want it */
+      right: 20px; /* Adjust to where you want it */
+      z-index: 9999;
+
+      border-radius: 50px;
+
+
+     }
+
+     .float-button .height_fix {
+       margin-top: 100%;
+     }
+
+     .float-button .content {
+       position: absolute;
+       left: 0;
+       top: 50%;
+       height: 100%;
+       width: 100%;
+       text-align: center;
+       margin-top: -20px; /* Note, this must be half the font size */
+       background-color:#2dcca6;
+       }
+
+
+</style>
+
+
+<ion-view class="scroll-bg">
+  <ion-content ng-controller="login">
+
+  <br>
+<img src="img/logo.png" class="center" style="width:200px; height:auto; padding-top:30px;">
+
+</div>
+<div class="container">
+  <div class="card" style="height:70%; border-radius:10px; position">
+
+    <form class="list" ng-submit="loginform()">
+    <div class="item item-text-wrap">
+
+  <center>  <h2>LOGIN</h2>  </center>
+
+            <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Username</span>
+          <input type="text" placeholder="Username" ng-model="username"  >
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="password">
+        </label
+						</div>
+
+</div>
+
+		<button type="submit" ng-click="showConfirm()" class="button button-block" class="sha" style="border-radius:50px; height:60px; width:280px; font-size:18px;">LOG IN</button>
+	</div>
+	<center><p style="color:white;">Dont have an account?<a href="#/register" style="color:white;"> Register</p></a></center>
+    </form>
+
+	</div>
+
+</ion-view>
